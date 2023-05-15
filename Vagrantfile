@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 # Provision ansible control Node
     
     config.vm.define "master" do |control|
-      control.vm.hostname = "master.clevory.local"
+      control.vm.hostname = "control.clevory.local"
 	    control.vm.network :private_network, ip: "192.168.30.200"
 	    control.vm.provision "shell", path: "control.sh"
       control.vm.provider "virtualbox" do |vb|
