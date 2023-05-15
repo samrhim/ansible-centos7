@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 	    control.vm.network :private_network, ip: "192.168.30.200"
 	    control.vm.provision "shell", path: "control.sh"
       control.vm.provider "virtualbox" do |vb|
-        vb.name = "master"
+        vb.name = "control"
         vb.memory = "2048"
       end
 	  end
